@@ -1,82 +1,82 @@
 <?php
 // +----------------------------------------------------------------------
-// | 文件: index.php
+// | 文件:index.php
 // +----------------------------------------------------------------------
-// | 功能: 提供todo api接口
+// | 功能：提供待办事项api接口
 // +----------------------------------------------------------------------
 // | 时间: 2021-11-15 16:20
 // +----------------------------------------------------------------------
-// | 作者: rangangwei<gangweiran@tencent.com>
+// | 作者:rangangwei<gangweiran@tencent.com >
 // +----------------------------------------------------------------------
 
-namespace app\controller;
+命名空间app \控制器；
 
-use Error;
-use Exception;
-use app\model\Counters;
-use think\response\Html;
-use think\response\Json;
-use think\facade\Log;
+使用错误；
+使用例外；
+使用app \型号\计数器；
+使用思考\响应\ Html
+使用思考\回应\ Json
+使用think \ facade \ Log
 
-class Index
+班级索引
 {
 
     /**
-     * 主页静态页面
-     * @return Html
+* 主页静态页面
+* @返回Html
      */
-    public function index(): Html
+    公众的 功能 指数():Html
     {
-        # html路径: ../view/index.html
-        return response(file_get_contents(dirname(dirname(__FILE__)).'/view/index.html'));
+        # html路径：../view/index.html
+        返回 反应(文件获取内容(目录名(目录名(__文件_ _))./view/index.html '));
     }
 
 
     /**
-     * 获取todo list
-     * @return Json
+* 获取待办事项列表
+* @返回Json
      */
-    public function getCount(): Json
+    公众的 功能 获取计数():Json
     {
-        try {
-            $data = (new Counters)->find(1);
-            if ($data == null) {
-                $count = 0;
-            }else {
-                $count = $data["count"];
+        尝试 {
+$data =(新的计数器)->发现(1);
+            如果 ($data ==空) {
+$count =0;
+            }其他 {
+$count = $data["计数"];
             }
-            $res = [
-                "code" => 0,
-                "data" =>  $count
+$res =[
+                "代码" => 1,
+                "数据"=> $count
             ];
-            Log::write('getCount rsp: '.json_encode($res));
-            return json($res);
-        } catch (Error $e) {
-            $res = [
-                "code" => -1,
-                "data" => [],
-                "errorMsg" => ("查询计数异常" . $e->getMessage())
+日志::写(getCount rsp:'.json_encode($res));
+            返回 json($res);
+        } 捕捉 (错误$e) {
+$res =[
+                "代码" => -1,
+                "数据" => [],
+                "错误消息" => ("查询计数异常" . $e->getMessage())
             ];
-            Log::write('getCount rsp: '.json_encode($res));
-            return json($res);
+日志::写(getCount rsp:'.json_encode($res));
+            返回 json($res);
         }
     }
 
 
     /**
-     * 根据id查询todo数据
-     * @param $action `string` 类型，枚举值，等于 `"inc"` 时，表示计数加一；等于 `"reset"` 时，表示计数重置（清零）
-     * @return Json
+* 根据身份证明（identification）查询待办事项数据
+* @param $action `string '类型,枚举值,等于` " inc "时,表示计数加一；等于`“重置”`时,表示计数重置（清零)
+* @返回Json
      */
-    public function updateCount($action): Json
+    公众的 功能 更新计数($行动):Json
     {
-        try {
-            if ($action == "inc") {
-                $data = (new Counters)->find(1);
-                if ($data == null) {
-                    $count = 1;
-                }else {
-                    $count = $data["count"] + 1;
+        尝试 {
+            如果 ($action =="公司") {
+$data =(新的计数器)->发现(1);
+                如果 ($data ==空) {
+$count =1;
+                }其他 {
+$count = $data["计数"] + 1;
                 }
     
                 $counters = new Counters;
@@ -91,7 +91,7 @@ class Index
             }
 
             $res = [
-                "code" => 0,
+                "code" => 1,
                 "data" =>  $count
             ];
             Log::write('updateCount rsp: '.json_encode($res));
