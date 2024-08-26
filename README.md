@@ -1,41 +1,41 @@
-# wxcloudrun-thinkphp
-[![GitHub license](https://img.shields.io/github/license/WeixinCloud/wxcloudrun-express)](https://github.com/WeixinCloud/wxcloudrun-express)
-![GitHub package.json dependency version (prod)](https://img.shields.io/badge/php-7.3-green)
+#wxcloudrun-thinkphp
+[![GitHub许可证](https://img . shields . io/github/license/weixin cloud/wxcloudrun-express)](https://github.com/WeixinCloud/wxcloudrun-express)
+![GitHub package.json依赖版本(prod)](https://img.shields.io/badge/php-7.3-green)
 
-微信云托管 Thinkphp 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
+微信云托管Thinkphp框架模版,实现简单的计数器读写接口,使用云托管关系型数据库读写、记录计数值。
 
-![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
-
-
-## 快速开始
-前往 [微信云托管快速开始页面](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/basic/guide.html)，选择相应语言的模板，根据引导完成部署。
-
-## 本地调试
-下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
-
-## 实时开发
-代码变动时，不需要重新构建和启动容器，即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
-
-## Dockerfile最佳实践
-请参考[如何提高项目构建效率](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/scene/build/speed.html)
+![](https://qcloud img . Tencent-cloud . cn/raw/be 22992d 297 D1 b 9 a 1a 5365 e 606276781 . png)
 
 
-## 目录结构说明
+##快速开始
+前往[微信云托管快速开始页面](https://developers . weixin . QQ . com/mini program/dev/wxcloudrun/src/basic/guide . html),选择相应语言的模板,根据引导完成部署。
+
+##本地调试
+下载代码在本地调试,请参考[微信云托管本地调试指南](https://developers . weixin . QQ . com/mini program/dev/wxcloudrun/src/guide/debug/)
+
+##实时开发
+代码变动时,不需要重新构建和启动容器,即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers . weixin . QQ . com/mini program/dev/wxcloudrun/src/guide/debug/dev . html)
+
+##Dockerfile文件最佳实践
+请参考[如何提高项目构建效率](https://developers . weixin . QQ . com/mini program/dev/wxcloudrun/src/scene/build/speed . html)
+
+
+##目录结构说明
 ~~~
 .
-├── Dockerfile                  Dockerfile 文件
-├── README.md                   README 文件
-├── app                         应用目录
-│   ├── controller              控制器目录
-│   ├── model                   模型目录
-│   └── view                    视图目录
-├── conf                        配置文件
-│   ├── fpm.conf                fpm 配置
-│   ├── nginx.conf              nginx 配置
-│   └── php.ini                 php 配置
-├── config                      thinkphp 配置
-├── container.config.json       模板部署「服务设置」初始化配置（二开请忽略）
-├── public                      WEB目录（对外访问目录）
+├──档案文件
+├──自述文件文件
+├──应用程序应用目录
+│ ├──控制器控制器目录
+│ ├──模式模型目录
+│ └──观点视图目录
+├──会议配置文件
+│ ├── fpm.conf fpm配置
+│ ├── nginx.conf nginx配置
+│ └── php.ini配置
+├──配置thinkphp配置
+├──容器模板部署「服务设置」初始化配置（二开请忽略)
+├──公共网站目录（对外访问目录)
 │   ├── favicon.ico             图标
 │   ├── index.php               入口文件       
 │   └── router.php              快速测试文件 
